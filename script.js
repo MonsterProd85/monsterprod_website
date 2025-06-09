@@ -9,6 +9,7 @@ function revealOnScroll() {
   });
 }
 
+
 const cards = document.querySelectorAll('.card');
 
 function checkCards() {
