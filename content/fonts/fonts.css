@@ -1,0 +1,97 @@
+@font-face {
+    font-family: 'Duplet';
+    src: url('duplet-font-family-1749452937-0/Duplet-Thin-BF642a340659e70.otf') format('opentype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Duplet';
+    src: url('duplet-font-family-1749452937-0/Duplet-ThinItalic-BF642a34061eee3.otf') format('opentype');
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Duplet';
+    src: url('duplet-font-family-1749452937-0/Duplet-Extralight-BF642a34066d940.otf') format('opentype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Duplet';
+    src: url('duplet-font-family-1749452937-0/Duplet-ExtralightItalic-BF642a34062fad2.otf') format('opentype');
+    font-weight: 200;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Duplet';
+    src: url('duplet-font-family-1749452937-0/Duplet-Light-BF642a34063c321.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Duplet';
+    src: url('duplet-font-family-1749452937-0/Duplet-LightItalic-BF642a340624d9b.otf') format('opentype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Duplet';
+    src: url('duplet-font-family-1749452937-0/Duplet-Regular-BF642a340663b06.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Duplet';
+    src: url('duplet-font-family-1749452937-0/Duplet-Italic-BF642a34058f127.otf') format('opentype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Duplet';
+    src: url('duplet-font-family-1749452937-0/Duplet-Semibold-BF642a34066f658.otf') format('opentype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Duplet';
+    src: url('duplet-font-family-1749452937-0/Duplet-SemiboldItalic-BF642a340662c47.otf') format('opentype');
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Duplet';
+    src: url('duplet-font-family-1749452937-0/Duplet-Bold-BF642a3406582e7.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Duplet';
+    src: url('duplet-font-family-1749452937-0/Duplet-BoldItalic-BF642a34065bd61.otf') format('opentype');
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Duplet';
+    src: url('duplet-font-family-1749452937-0/Duplet-Extrabold-BF642a34066ffff.otf') format('opentype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Duplet';
+    src: url('duplet-font-family-1749452937-0/Duplet-ExtraboldItalic-BF642a34064c93d.otf') format('opentype');
+    font-weight: 800;
+    font-style: italic;
+}

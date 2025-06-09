@@ -6,22 +6,24 @@
   <title>Monster Prod - Accueil</title>
   <link href="https://fonts.googleapis.com/css2?family=Duplet:wght@400;700&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="content/fonts/fonts.css" />
 </head>
 <body>
 
   <header class="header">
-    <img src="content/logo.webp" alt="Monster Prod Logo" />
+    <img src="content/logo.png" alt="Monster Prod Logo" />
     <nav>
       <ul>
         <li><a href="#home">Accueil</a></li>
         <li><a href="#services">Services</a></li>
          <li><a href="#about">Nous</a></li>
-        <li><a href="/contact/">Contact</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <section id="home" class="hero">
+    <div class="video-transition-box"></div>
     <video autoplay muted playsinline loop id="bg-video">
       <source src="content/video_presentation.mp4" type="video/mp4" />
       Votre navigateur ne supporte pas la vidéo.
@@ -29,7 +31,7 @@
     <div class="overlay"></div>
     <div class="hero-content">
       <h1>Faites briller vos événements</h1>
-      <p>Sonorisation • Vidéo • Lumières — Avec Monster Prod, chaque moment compte.</p>
+      <p>Sonorisation • Vidéo • Lumières <br> Avec Monster Prod, <b>chaque moment compte.</b></p>
       <a href="#services" class="btn-primary">Découvrir nos services</a>
     </div>
   </section>
@@ -63,8 +65,27 @@
       <a href="/contact/" class="btn-secondary">Nous contacter</a>
     </div>
     <div class="about-image">
-      <img src="content/about.jpg" alt="Équipe Monster Prod" />
+      <img src="content/about.avif" alt="Équipe Monster Prod" />
     </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2 class="section-title">Contactez-nous</h2>
+    <form action="#" method="post">
+      <div class="form-group">
+        <label for="name">Nom</label>
+        <input type="text" id="name" name="name" required />
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+      </div>
+      <button type="submit" class="btn-primary">Envoyer</button>
+    </form>
   </section>
 
   <footer class="footer">

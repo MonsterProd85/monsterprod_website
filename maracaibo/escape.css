@@ -9,7 +9,7 @@ body {
   max-width: 900px;
   margin: auto;
   padding: 2rem;
-  background: url('content/parchment_bg.jpg') center/cover no-repeat;
+  background: url('content/parchment_bg.avif') center/cover no-repeat;
   background-blend-mode: overlay;
   border: 12px ridge #8c7442;
   box-shadow: 0 0 80px rgba(0, 0, 0, 0.5);
