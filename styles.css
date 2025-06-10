@@ -73,7 +73,7 @@ html, body {
 } */
 .header nav a:hover {
   background-color: rgba(0, 0, 0, 0.516);
-  padding: 5px 10px;
+  padding: 5px 15px;
   border-radius: 8px;
   backdrop-filter: blur(40px);
   -webkit-backdrop-filter: blur(40px);
@@ -87,6 +87,9 @@ html, body {
   height: 50px;
   outline: rgba(255, 255, 255, 0.145) 1px solid;
   box-shadow: #111 0px 0px 10px;
+}
+.lastlink {
+  border-radius: 8px 20px 20px 8px !important;
 }
 
 /* Hero */
