@@ -37,11 +37,12 @@ html, body {
   padding: 10px;
   transition: padding 0.3s ease;
   cursor: pointer;
+  margin: 10px 0;
   background-color: rgba(0, 0, 0, 0);
   outline: rgba(255, 255, 255, 0) 0px solid;
 }
 .header img:hover {
-  padding: 8px 5px;
+  padding: 8px 10px;
   background-color: rgba(0, 0, 0, 0.516);
   border-radius: 20px 8px 8px 20px;
   backdrop-filter: blur(40px);
@@ -90,6 +91,7 @@ html, body {
 }
 .lastlink {
   border-radius: 8px 20px 20px 8px !important;
+  font-weight: bold !important;
 }
 
 /* Hero */
