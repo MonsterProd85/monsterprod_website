@@ -336,18 +336,17 @@ html, body {
 
 /* --- Contact Section --- */
 .contact {
-    padding: 60px 20px; /* Consistent padding with other sections */
+    padding: 60px 20px;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center the form horizontally */
-    max-width: 1200px; /* Increased max-width to accommodate two columns comfortably */
-    margin: 0 auto; /* Center the entire contact section */
-    /* No background here, it inherits from body/parent */
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .contact .section-title {
     margin-bottom: 20px;
-    color: #333; /* Use a darker color for titles if the section background is light */
+    color: #ffffff; /* Assuming a dark grey for titles */
     font-family: 'Duplet', sans-serif;
     font-size: 2.5em;
     text-align: center;
@@ -356,30 +355,30 @@ html, body {
 
 .contact-intro {
     text-align: center;
-    max-width: 700px; /* Adjusted max-width for readability */
+    max-width: 700px;
     margin-bottom: 40px;
     font-family: 'Poppins', sans-serif;
     font-size: 1.1em;
-    color: #555; /* Use a darker color for body text if the section background is light */
+    color: #ccc; /* Assuming a softer grey for body text */
     line-height: 1.6;
-    width: 100%; /* Ensures it takes full width within its container */
+    width: 100%;
 }
 
 .contact-grid-container {
-    display: grid; /* Use CSS Grid for robust two-column layout */
-    grid-template-columns: 1fr 1fr; /* Two columns, equal width */
-    gap: 40px; /* Space between the form and info columns */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
     width: 100%;
-    align-items: flex-start; /* Align items to the top of their grid area */
+    align-items: flex-start;
 }
 
 .contact-form {
-    width: 100%; /* Take full width of its grid column */
-    max-width: none; /* Override previous max-width to allow grid control */
-    background-color: #fff; /* White background for the form container */
+    width: 100%;
+    max-width: none;
+    background-color: #ffffff00;
     padding: 30px;
     border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); /* Consistent subtle shadow */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
 
 .contact-form .form-group {
@@ -391,7 +390,7 @@ html, body {
     margin-bottom: 8px;
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
-    color: #444; /* Darker grey for labels */
+    color: #ccc;
 }
 
 .contact-form input[type="text"],
@@ -399,19 +398,19 @@ html, body {
 .contact-form textarea {
     width: 100%;
     padding: 12px 15px;
-    border: 1px solid #ddd;
+    border: 1px solid #dddddd;
     border-radius: 5px;
     font-family: 'Poppins', sans-serif;
     font-size: 1em;
     transition: border-color 0.3s ease;
     box-sizing: border-box;
-    color: #333; /* Ensure input text is readable */
+    color: #333;
 }
 
 .contact-form input[type="text"]:focus,
 .contact-form input[type="email"]:focus,
 .contact-form textarea:focus {
-    border-color: #007bff; /* Your primary brand color on focus */
+    border-color: #007bff;
     outline: none;
 }
 
@@ -426,7 +425,7 @@ html, body {
     padding: 12px 30px;
     font-size: 1.1em;
     cursor: pointer;
-    background-color: #007bff; /* Your primary button color (blue) */
+    background-color: #007bff;
     color: white;
     border: none;
     border-radius: 5px;
@@ -434,26 +433,24 @@ html, body {
 }
 
 .contact-form .btn-primary:hover {
-    background-color: #0056b3; /* Darker shade on hover */
+    background-color: #0056b3;
     transform: translateY(-2px);
 }
 
-/* New Styles for Contact Info */
+/* Updated Styles for Contact Info */
 .contact-info {
-    width: 100%; /* Takes full width of its grid column */
-    /* No background-color for this div as requested */
-    padding: 30px; /* Add internal padding */
+    width: 100%;
+    padding: 30px;
     border-radius: 8px;
-    /* No box-shadow as it has no background */
-    display: flex; /* Use flexbox for internal alignment */
+    display: flex;
     flex-direction: column;
-    justify-content: center; /* Vertically center content if there's extra space */
+    justify-content: center;
 }
 
 .contact-info h3 {
     font-family: 'Duplet', sans-serif;
     font-size: 1.8em;
-    color: #333; /* Consistent title color */
+    color: #ffffff; /* Keep heading distinct if needed, or change to #ccc */
     margin-bottom: 25px;
     text-align: center;
 }
@@ -461,62 +458,68 @@ html, body {
 .contact-info ul {
     list-style: none;
     padding: 0;
-    margin-bottom: 30px;
+    margin-bottom: 0;
 }
 
 .contact-info ul li {
     font-family: 'Poppins', sans-serif;
     font-size: 1.1em;
-    color: #555; /* Consistent body text color */
+    color: #ccc; /* Set default text color for all list items to #ccc */
     margin-bottom: 15px;
     display: flex;
-    align-items: center; /* Align icon and text vertically */
-    gap: 15px; /* Space between icon and text */
+    align-items: center;
+    gap: 15px;
 }
 
-.contact-info ul li i {
-    color: #007bff; /* Your primary brand color for icons */
+/* Style for the clickable anchor tags inside list items */
+.contact-info ul li a {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-decoration: none; /* Remove underline from links */
+    color: #ccc; /* Set link text color to #ccc */
+    transition: color 0.3s ease;
+}
+
+/* Style for icons within clickable list items */
+.contact-info ul li a i {
+    color: #ccc; /* Set icon color to #ccc */
     font-size: 1.3em;
 }
 
-.contact-info .social-links {
-    text-align: center;
-    margin-top: 20px;
+/* Hover effect for clickable list items (entire link) */
+.contact-info ul li a:hover {
+    color: #e0e0e0; /* Slightly lighter on hover for subtle feedback */
 }
 
-.contact-info .social-links a {
-    color: #007bff; /* Your primary brand color for social icons */
-    font-size: 2.2em;
-    margin: 0 15px;
-    transition: color 0.3s ease, transform 0.2s ease;
+.contact-info ul li a:hover i {
+    color: #fff; /* White icon on hover for better contrast */
 }
 
-.contact-info .social-links a:hover {
-    color: #0056b3; /* Darker shade on hover */
-    transform: translateY(-3px);
-}
-
-/* --- Media Queries for Responsiveness --- */
+/* Media Queries for Responsiveness */
 @media (max-width: 992px) {
     .contact-grid-container {
-        grid-template-columns: 1fr; /* Stack columns vertically on smaller screens */
+        grid-template-columns: 1fr;
         gap: 30px;
     }
 
     .contact-form,
     .contact-info {
-        max-width: 500px; /* Limit width when stacked */
-        margin: 0 auto; /* Center when stacked */
+        max-width: 500px;
+        margin: 0 auto;
     }
 
     .contact-info {
-        padding: 0; /* Remove padding if you don't want it when stacked and no background */
+        padding: 0;
     }
 
     .contact-info h3,
     .contact-info ul,
     .contact-info .social-links {
-        text-align: center; /* Re-center elements within info block */
+        text-align: center;
+    }
+    .contact-info ul li {
+        justify-content: center;
     }
 }
 
@@ -536,10 +539,6 @@ html, body {
 
     .contact-form {
         padding: 25px;
-    }
-
-    .contact-info ul li {
-        justify-content: center; /* Center items for small screens */
     }
 }
 
