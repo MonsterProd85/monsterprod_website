@@ -395,4 +395,7 @@ html, body {
   .about {
     flex-direction: column;
   }
+  .footer {
+    padding: 1rem 1rem;
+  }
 }
