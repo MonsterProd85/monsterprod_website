@@ -334,15 +334,270 @@ html, body {
   z-index: 5;
 }
 
-/* Contact */
+/* --- Contact Section --- */
 .contact {
-  position: relative;
-  z-index: 25;
-  background: #111;
-  padding: 6rem 2rem;
-  text-align: center;
+    padding: 60px 20px; /* Consistent padding with other sections */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the form horizontally */
+    max-width: 1200px; /* Increased max-width to accommodate two columns comfortably */
+    margin: 0 auto; /* Center the entire contact section */
+    /* No background here, it inherits from body/parent */
 }
 
+.contact .section-title {
+    margin-bottom: 20px;
+    color: #333; /* Use a darker color for titles if the section background is light */
+    font-family: 'Duplet', sans-serif;
+    font-size: 2.5em;
+    text-align: center;
+    width: 100%;
+}
+
+.contact-intro {
+    text-align: center;
+    max-width: 700px; /* Adjusted max-width for readability */
+    margin-bottom: 40px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1em;
+    color: #555; /* Use a darker color for body text if the section background is light */
+    line-height: 1.6;
+    width: 100%; /* Ensures it takes full width within its container */
+}
+
+.contact-grid-container {
+    display: grid; /* Use CSS Grid for robust two-column layout */
+    grid-template-columns: 1fr 1fr; /* Two columns, equal width */
+    gap: 40px; /* Space between the form and info columns */
+    width: 100%;
+    align-items: flex-start; /* Align items to the top of their grid area */
+}
+
+.contact-form {
+    width: 100%; /* Take full width of its grid column */
+    max-width: none; /* Override previous max-width to allow grid control */
+    background-color: #fff; /* White background for the form container */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); /* Consistent subtle shadow */
+}
+
+.contact-form .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    color: #444; /* Darker grey for labels */
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box;
+    color: #333; /* Ensure input text is readable */
+}
+
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form textarea:focus {
+    border-color: #007bff; /* Your primary brand color on focus */
+    outline: none;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form .btn-primary {
+    width: auto;
+    display: block;
+    margin: 20px auto 0 auto;
+    padding: 12px 30px;
+    font-size: 1.1em;
+    cursor: pointer;
+    background-color: #007bff; /* Your primary button color (blue) */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.contact-form .btn-primary:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+    transform: translateY(-2px);
+}
+
+/* New Styles for Contact Info */
+.contact-info {
+    width: 100%; /* Takes full width of its grid column */
+    /* No background-color for this div as requested */
+    padding: 30px; /* Add internal padding */
+    border-radius: 8px;
+    /* No box-shadow as it has no background */
+    display: flex; /* Use flexbox for internal alignment */
+    flex-direction: column;
+    justify-content: center; /* Vertically center content if there's extra space */
+}
+
+.contact-info h3 {
+    font-family: 'Duplet', sans-serif;
+    font-size: 1.8em;
+    color: #333; /* Consistent title color */
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.contact-info ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+.contact-info ul li {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1em;
+    color: #555; /* Consistent body text color */
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center; /* Align icon and text vertically */
+    gap: 15px; /* Space between icon and text */
+}
+
+.contact-info ul li i {
+    color: #007bff; /* Your primary brand color for icons */
+    font-size: 1.3em;
+}
+
+.contact-info .social-links {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.contact-info .social-links a {
+    color: #007bff; /* Your primary brand color for social icons */
+    font-size: 2.2em;
+    margin: 0 15px;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.contact-info .social-links a:hover {
+    color: #0056b3; /* Darker shade on hover */
+    transform: translateY(-3px);
+}
+
+/* --- Media Queries for Responsiveness --- */
+@media (max-width: 992px) {
+    .contact-grid-container {
+        grid-template-columns: 1fr; /* Stack columns vertically on smaller screens */
+        gap: 30px;
+    }
+
+    .contact-form,
+    .contact-info {
+        max-width: 500px; /* Limit width when stacked */
+        margin: 0 auto; /* Center when stacked */
+    }
+
+    .contact-info {
+        padding: 0; /* Remove padding if you don't want it when stacked and no background */
+    }
+
+    .contact-info h3,
+    .contact-info ul,
+    .contact-info .social-links {
+        text-align: center; /* Re-center elements within info block */
+    }
+}
+
+@media (max-width: 768px) {
+    .contact {
+        padding: 40px 15px;
+    }
+
+    .contact .section-title {
+        font-size: 2em;
+    }
+
+    .contact-intro {
+        font-size: 1em;
+        margin-bottom: 30px;
+    }
+
+    .contact-form {
+        padding: 25px;
+    }
+
+    .contact-info ul li {
+        justify-content: center; /* Center items for small screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-form {
+        padding: 20px;
+    }
+
+    .contact-form input[type="text"],
+    .contact-form input[type="email"],
+    .contact-form textarea {
+        padding: 10px 12px;
+        font-size: 0.95em;
+    }
+
+    .contact-form .btn-primary {
+        font-size: 1em;
+        padding: 10px 25px;
+    }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .contact {
+        padding: 40px 15px; /* Adjust padding for smaller screens */
+    }
+
+    .contact .section-title {
+        font-size: 2em;
+    }
+
+    .contact-intro {
+        font-size: 1em;
+        margin-bottom: 30px;
+    }
+
+    .contact-form {
+        padding: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-form {
+        padding: 20px;
+    }
+
+    .contact-form input[type="text"],
+    .contact-form input[type="email"],
+    .contact-form textarea {
+        padding: 10px 12px;
+        font-size: 0.95em;
+    }
+
+    .contact-form .btn-primary {
+        font-size: 1em;
+        padding: 10px 25px;
+    }
+}
 
 /* animations */
 .fade-in {
