@@ -46,8 +46,8 @@ html, body {
   padding: 8px 10px;
   background-color: rgba(0, 0, 0, 0.516);
   border-radius: 20px 8px 8px 20px;
-  backdrop-filter: blur(40px);
   -webkit-backdrop-filter: blur(40px);
+  backdrop-filter: blur(40px);
   outline: rgba(255, 255, 255, 0.145) 1px solid;
 }
 .header nav ul {
@@ -64,28 +64,18 @@ html, body {
   outline: rgba(255, 255, 255, 0) 0px solid;
   pointer-events: all;
 }
-/* .header nav a::after {
-  content: '';
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: #ffffff;
-  transition: width 0.3s;
-} */
 .header nav a:hover {
   background-color: rgba(0, 0, 0, 0.516);
   padding: 5px 15px;
   border-radius: 8px;
-  backdrop-filter: blur(40px);
   -webkit-backdrop-filter: blur(40px);
+  backdrop-filter: blur(40px);
   outline: rgba(255, 255, 255, 0.145) 1px solid;
 }
 .header-scrolled {
   background-color: #00000099;
-  backdrop-filter: blur(40px);
   -webkit-backdrop-filter: blur(40px);
+  backdrop-filter: blur(40px);
   max-width: 1050px;
   height: 50px;
   outline: rgba(255, 255, 255, 0.145) 1px solid;
@@ -94,8 +84,8 @@ html, body {
 .header-scrolled img:hover {
   background-color: rgba(0, 0, 0, 0);
   outline: rgba(255, 255, 255, 0) 0px solid;
-  backdrop-filter: blur(0px);
   -webkit-backdrop-filter: blur(0px);
+  backdrop-filter: blur(0px);
 }
 .lastlink {
   border-radius: 8px 20px 20px 8px !important;
@@ -238,8 +228,8 @@ html, body {
 .btn-secondary {
   display: inline-block;
   background: transparent;
-  border: 2px solid #1e40af;
-  color: #1e40af;
+  border: 2px solid #5a80fb;
+  color: #5a80fb;
   padding: 0.6rem 1.5rem;
   border-radius: 8px;
   text-decoration: none;
@@ -247,7 +237,7 @@ html, body {
   transition: background 0.3s, color 0.3s;
 }
 .btn-secondary:hover {
-  background: #1e40af;
+  background: #5a80fb;
   color: #fff;
 }
 .about-image {
