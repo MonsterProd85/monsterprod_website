@@ -30,6 +30,7 @@ html, body {
   height: 40px;
   outline: rgba(255, 255, 255, 0) 0px solid;
   pointer-events: none;
+  animation: menubarFadeIn 0.5s ease-out;
 }
 .header img {
   height: 50px;
@@ -115,6 +116,7 @@ html, body {
   align-items: center;
   justify-content: center;
   text-align: center;
+  animation: fadeIn 1s ease-out;
 }
 #bg-video {
   position: absolute;
@@ -341,6 +343,37 @@ html, body {
   text-align: center;
 }
 
+
+/* animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes menubarFadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0px) scale(1);
+  }
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
 
 /* Responsive */
 @media (max-width: 768px) {
