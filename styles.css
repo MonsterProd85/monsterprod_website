@@ -326,6 +326,16 @@ html, body {
   z-index: 30;
 }
 
+.footer-svg-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  z-index: 50;
+  color: #fff;
+  position: relative;
+}
+
 /* Background overlay : au-dessus de la vidéo, mais sous le contenu */
 .overlay {
   position: absolute;
@@ -345,6 +355,10 @@ html, body {
 
 
 /* animations */
+.fade-in {
+  animation: fadeIn 0.6s forwards;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -374,6 +388,7 @@ html, body {
   75% { transform: translateX(-5px); }
   100% { transform: translateX(0); }
 }
+
 
 /* Responsive */
 @media (max-width: 768px) {
