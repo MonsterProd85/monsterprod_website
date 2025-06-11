@@ -1,5 +1,4 @@
 const content = document.querySelectorAll('.card, .about-text, .about-image');
-
 function revealOnScroll() {
   content.forEach(el => {
     const rect = el.getBoundingClientRect();
@@ -8,29 +7,45 @@ function revealOnScroll() {
     }
   });
 }
-
-
-const cards = document.querySelectorAll('.card');
-
-function checkCards() {
-  cards.forEach(card => {
-    const rect = card.getBoundingClientRect();
-    if (rect.top < window.innerHeight - 100) {
-      card.classList.add('in-view');
-    }
-  });
-}
-
-window.addEventListener('scroll', checkCards);
-window.addEventListener('load', checkCards);
-
-
-window.addEventListener('scroll', revealOnScroll);
-window.addEventListener('load', revealOnScroll);
+// const cards = document.querySelectorAll('.card');
+// function checkCards() {
+//   cards.forEach(card => {
+//     const rect = card.getBoundingClientRect();
+//     if (rect.top < window.innerHeight - 100) {
+//       card.classList.add('in-view');
+//     }
+//   });
+// }
+// window.addEventListener('scroll', checkCards);
+// window.addEventListener('load', checkCards);
 
 // Mise à jour de l'année
 document.getElementById('year').textContent = new Date().getFullYear();
 
+
+window.addEventListener('load', () => {
+  let lastKnownScrollPosition = window.scrollY || document.documentElement.scrollTop || document.body.scrollTop || 0;
+  const scrollCheckIntervalMs = 100;
+  if (typeof toggleHeaderClass === 'function') {
+    toggleHeaderClass();
+  } else {
+    console.error("toggleHeaderClass function is not defined by the time 'load' event fires or is not a function.");
+  }
+  function handleScrollChange() {
+    const currentScrollY = window.scrollY || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    if (currentScrollY !== lastKnownScrollPosition) {
+      if (typeof toggleHeaderClass === 'function') {
+        toggleHeaderClass();
+      }
+      lastKnownScrollPosition = currentScrollY;
+    }
+  }
+  setInterval(handleScrollChange, scrollCheckIntervalMs);
+});
+
+
+window.addEventListener('scroll', revealOnScroll);
+window.addEventListener('load', revealOnScroll);
 
 const header = document.querySelector('.header');
 function toggleHeaderClass() {
@@ -43,7 +58,3 @@ function toggleHeaderClass() {
   console.log('scroll position', scrollPosition);
   console.log('header class', header.classList);
 }
-window.addEventListener('scroll', toggleHeaderClass);
-window.addEventListener('load', toggleHeaderClass);
-
-setInterval(toggleHeaderClass, 100);
