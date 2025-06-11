@@ -110,7 +110,7 @@ html, body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  animation: fadeIn 1s ease-out;
+  animation: fadeIn 1.5s ease-in-out;
 }
 #bg-video {
   position: absolute;
@@ -280,8 +280,6 @@ html, body {
   color: #fff;
 }
 
-
-/* Hero content visible direct */
 .hero-content {
   position: relative;
   z-index: 10;
@@ -298,8 +296,6 @@ html, body {
   opacity: 1 !important;
   transform: none !important;
 }
-
-
 
 .in-view {
   opacity: 1 !important;
@@ -330,6 +326,7 @@ html, body {
   z-index: 5;
 }
 
+/* contact */
 .contact {
     padding: 60px 20px;
     display: flex;
@@ -386,6 +383,10 @@ html, body {
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
   color: #ccc;
+  background-color: #111;
+  width: fit-content;
+  padding: 0px 5px;
+  transform: translate(10px, 20px);
 }
 
 .contact-form input[type="text"],
@@ -408,6 +409,14 @@ html, body {
 .contact-form textarea:focus {
   border-color: #007bff;
   outline: none;
+}
+
+input:focus + label {
+  color: #007bff;
+}
+
+textarea:focus + label {
+  color: #007bff;
 }
 
 .contact-form textarea {
@@ -616,7 +625,7 @@ html, body {
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(60px);
   }
   to {
     opacity: 1;
