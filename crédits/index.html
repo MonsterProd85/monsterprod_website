@@ -3,11 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Conditions de Service</title>
-  <link href="https://fonts.googleapis.com/css2?family=Duplet:wght@400;700&display=swap" rel="stylesheet" />
+  <title>Crédits</title>
   <link rel="stylesheet" href="styles.css" />
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
-<body>
 
   <header>
     <img src="../content/logo.png" alt="Monster Prod Logo" />
@@ -21,20 +20,25 @@
     </nav>
   </header>
 
-  <main>
-    <h1>404</h1>
-    <h2>Page non trouvé</h2>
+ 
 
-  </main>
+  <main>
+    <h1>Crédits</h1>
+    <p>Rien à afficher pour l'instant...</p>
 
   <footer>
     <ul>
-      <li><a href="../tos/">Conditions de Service</a></li>
+      <li><a href="../conditions/">Conditions de Service</a></li>
       <li><a href="#">Crédits</a></li>
     </ul>
     <p>© Monster Prod <span id="year"></span></p>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="../script.js"></script>
+  <script>
+    function enablePhone() {
+      document.getElementById("phone-container").classList.remove("phone-hidden");
+    }
+  </script>
 </body>
 </html>
