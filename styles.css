@@ -386,117 +386,123 @@ html, body {
 }
 
 .contact-form label {
-    display: block;
-    margin-bottom: 8px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 500;
-    color: #ccc;
+  display: block;
+  margin-bottom: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  color: #ccc;
 }
 
 .contact-form input[type="text"],
 .contact-form input[type="email"],
 .contact-form textarea {
-    width: 100%;
-    padding: 12px 15px;
-    border: 1px solid #dddddd;
-    border-radius: 5px;
-    font-family: 'Poppins', sans-serif;
-    font-size: 1em;
-    transition: border-color 0.3s ease;
-    box-sizing: border-box;
-    color: #333;
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px dashed #dddddd;
+  border-radius: 5px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1em;
+  transition: border-color 0.3s ease;
+  box-sizing: border-box;
+  color: rgb(255, 255, 255);
+  background-color: #ffffff00;
 }
 
 .contact-form input[type="text"]:focus,
 .contact-form input[type="email"]:focus,
 .contact-form textarea:focus {
-    border-color: #007bff;
-    outline: none;
+  border-color: #007bff;
+  outline: none;
 }
 
 .contact-form textarea {
-    resize: vertical;
+  resize: vertical;
+  min-height: 60px;
+  max-height: 300px;
 }
 
 .contact-form .btn-primary {
-    width: auto;
-    display: block;
-    margin: 20px auto 0 auto;
-    padding: 12px 30px;
-    font-size: 1.1em;
-    cursor: pointer;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 100%;
+  display: block;
+  margin: 20px auto 0 auto;
+  padding: 12px 30px;
+  font-size: 1.1em;
+  cursor: pointer;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  animation: border 0.3s ease-in-out;
 }
 
 .contact-form .btn-primary:hover {
-    background-color: #0056b3;
-    transform: translateY(-2px);
+  background-color: #0056b3;
+  transform: translateY(-2px);
 }
 
-/* Updated Styles for Contact Info */
 .contact-info {
-    width: 100%;
-    padding: 30px;
-    border-radius: 8px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  width: 100%;
+  padding: 30px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .contact-info h3 {
-    font-family: 'Duplet', sans-serif;
-    font-size: 1.8em;
-    color: #ffffff; /* Keep heading distinct if needed, or change to #ccc */
-    margin-bottom: 25px;
-    text-align: center;
+  font-family: 'Duplet', sans-serif;
+  font-size: 1.8em;
+  color: #ffffff;
+  margin-bottom: 25px;
+  text-align: center;
 }
 
 .contact-info ul {
-    list-style: none;
-    padding: 0;
-    margin-bottom: 0;
+  list-style: none;
+  padding: 0;
+  margin-bottom: 0;
 }
 
 .contact-info ul li {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.1em;
-    color: #ccc; /* Set default text color for all list items to #ccc */
-    margin-bottom: 15px;
-    display: flex;
-    align-items: center;
-    gap: 15px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1em;
+  color: #ccc;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
-/* Style for the clickable anchor tags inside list items */
 .contact-info ul li a {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    text-decoration: none; /* Remove underline from links */
-    color: #ccc; /* Set link text color to #ccc */
-    transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  text-decoration: none;
+  color: #ccc; 
+  transition: color 0.3s ease;
+  padding: 10px 15px;
+  border-radius: 5px;
+  outline: 2px solid #007bff00;
+  transition: all 0.3s ease;
 }
 
-/* Style for icons within clickable list items */
 .contact-info ul li a i {
-    color: #ccc; /* Set icon color to #ccc */
-    font-size: 1.3em;
+  color: #ccc;
+  font-size: 1.3em;
 }
 
-/* Hover effect for clickable list items (entire link) */
 .contact-info ul li a:hover {
-    color: #e0e0e0; /* Slightly lighter on hover for subtle feedback */
+  color: #ffffff;
+  outline: 2px solid #007bff;
+  background-color: #007bff2d;
 }
 
 .contact-info ul li a:hover i {
-    color: #fff; /* White icon on hover for better contrast */
+  color: #fff;
 }
 
-/* Media Queries for Responsiveness */
+/* Responsiveness */
 @media (max-width: 992px) {
     .contact-grid-container {
         grid-template-columns: 1fr;
@@ -598,6 +604,16 @@ html, body {
     }
 }
 
+@media (max-width: 768px) {
+  .about {
+    flex-direction: column;
+  }
+  .footer {
+    padding: 1rem 1rem;
+  }
+}
+
+
 /* animations */
 .fade-in {
   animation: fadeIn 0.6s forwards;
@@ -631,15 +647,4 @@ html, body {
   50% { transform: translateX(5px); }
   75% { transform: translateX(-5px); }
   100% { transform: translateX(0); }
-}
-
-
-/* Responsive */
-@media (max-width: 768px) {
-  .about {
-    flex-direction: column;
-  }
-  .footer {
-    padding: 1rem 1rem;
-  }
 }
