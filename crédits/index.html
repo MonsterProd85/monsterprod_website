@@ -3,10 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Crédits</title>
+  <title>Crédits - Monster Prod</title>
   <link rel="stylesheet" href="styles.css" />
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
+<body>
 
   <header>
     <img src="../content/logo.png" alt="Monster Prod Logo" />
@@ -20,16 +22,65 @@
     </nav>
   </header>
 
- 
-
   <main>
     <h1>Crédits</h1>
-    <p>Rien à afficher pour l'instant...</p>
+    <p class="update-date">Dernière mise à jour : 11 juin 2025</p>
+
+    <section>
+      <h2>Développement & Conception</h2>
+      <div class="credit-item">
+        <p><strong>Conception UI/UX & Développement Front-end :</strong></p>
+        <p>
+          Développeur Principal : Antoine Rossi
+        </p>
+        <p>
+          Assistant Développeur Principal : Alix Bachelier
+        </p>
+        <p>
+          Technologies utilisées : HTML5, CSS3, JavaScript
+        </p>
+      </div>
+      <div class="credit-item">
+        <p><strong>Intégration et Optimisation :</strong></p>
+        <p>
+          Théo Chauvet, Antoine Rossi
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Ressources et Contributions</h2>
+      <div class="credit-item">
+        <p><strong>Icônes & Illustrations :</strong></p>
+        <ul>
+          <li>Icônes par <a href="https://fontawesome.com/" target="_blank" rel="noopener noreferrer">Font Awesome</a></li>
+        </ul>
+      </div>
+      <div class="credit-item">
+        <p><strong>Polices :</strong></p>
+        <ul>
+          <li>
+            Police "Montserrat" via <a href="https://fonts.google.com/" target="_blank" rel="noopener noreferrer">Google Fonts</a>
+          </li>
+         <li>
+            Police "Duplet" via <a href="https://befonts.com" target="_blank" rel="noopener noreferrer">Befonts</a>
+          </li>
+        </ul>
+      </div>
+      <div class="credit-item">
+        <p><strong>Plateformes & Outils :</strong></p>
+        <ul>
+          <li>Contrôle de version : <a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+          <li>reCAPTCHA par <a href="https://www.google.com/recaptcha/about/" target="_blank" rel="noopener noreferrer">Google</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
 
   <footer>
     <ul>
       <li><a href="../conditions/">Conditions de Service</a></li>
-      <li><a href="#">Crédits</a></li>
+      <li><a href="../crédits/">Crédits</a></li>
     </ul>
     <p>© Monster Prod <span id="year"></span></p>
   </footer>
@@ -39,6 +90,8 @@
     function enablePhone() {
       document.getElementById("phone-container").classList.remove("phone-hidden");
     }
+    // Set current year for the footer
+    document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
