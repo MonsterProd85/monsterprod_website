@@ -735,10 +735,13 @@ textarea:focus + label {
   }
 }
 @keyframes outlineFadeInOn {
-  from {
+  0% {
+    outline: rgba(255, 255, 255, 0) 0px solid;
+  }
+  40% {
     outline: rgba(255, 255, 255, 0.693) 2px solid;
   }
-  to {
+  100% {
     outline: rgba(255, 255, 255, 0.318) 1px solid;
   }
 }
