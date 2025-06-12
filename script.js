@@ -67,3 +67,16 @@ function addAnimationToCardsOnScroll() {
     cards.classList.add('card-animation');
   }
 }
+
+const taglines = [
+  "Faites briller vos évènements",
+  "Son, lumière, action !",
+  "Des événements inoubliables",
+];
+
+const mainTitleElement = document.getElementById('mainTitle');
+
+const randomIndex = Math.floor(Math.random() * taglines.length);
+const selectedTagline = taglines[randomIndex];
+
+mainTitleElement.textContent = `${selectedTagline}`;
