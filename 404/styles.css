@@ -1,117 +1,263 @@
-/* Reset et font */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* General Body and HTML Reset */
+:root {
+    --primary-color: #ffffff; /* Example blue */
+    --secondary-color: #f3f5f7; /* Example grey */
+    --accent-color: #e1e2eb; /* Orange for emphasis */
+    --text-dark: #f0e7e7;
+    --text-light: #ffffff;
+    --bg-light: #000000;
+    --bg-dark: #000000; /* A slightly off-white for background */
+    --border-radius: 8px;
+    --font-duplet: 'Duplet', sans-serif;
+    --font-sans: 'Inter', sans-serif; /* Assuming Inter is a fallback or main font */
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 16px; /* Base font size */
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-  font-family: 'Duplet', sans-serif;
-  background-color: #121212;
-  color: #eee;
-  line-height: 1.6;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+    font-family: var(--font-sans);
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--bg-dark); /* Light background for the body */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Full viewport height */
+    overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
-/* Header */
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 70px;
-  background: rgba(20, 20, 20, 0.95);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 2rem;
-  z-index: 1000;
+/* Header Styling */
+.main-header {
+    background-color: var(--bg-light); /* Light header background */
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap; /* Allow header content to wrap */
 }
 
-header img {
-  height: 50px;
+.header-logo {
+    height: 50px; /* Adjust as needed */
+    max-width: 100%;
 }
 
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 2rem;
+.logo-link {
+    display: flex;
+    align-items: center;
 }
 
-nav a {
-  color: #eee;
-  text-decoration: none;
-  font-weight: 600;
-  transition: color 0.3s ease;
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap; /* Allow nav items to wrap */
+    justify-content: center; /* Center nav items when wrapped */
 }
 
-nav a:hover {
-  color: #1e40af;
+.main-nav a {
+    text-decoration: none;
+    color: var(--primary-color); /* Dark text for nav links */
+    font-weight: 600;
+    padding: 0.5rem 0.8rem;
+    border-radius: var(--border-radius);
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Main content */
-main {
-  max-width: 900px;
-  margin: 90px auto 3rem;
-  padding: 0 1rem;
+.main-nav a:hover,
+.main-nav a:focus {
+    background-color: var(--primary-color);
+    color: var(--text-light); /* Light text on hover */
 }
 
-main h1 {
-  font-size: 2.8rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  text-align: center;
+/* Main Content - Error Page Specifics */
+.error-content {
+    flex-grow: 1; /* Allows main content to take up available space */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--bg-light); /* Light main content background */
+    margin: 2rem auto; /* Center the main content block */
+    max-width: 800px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.update-date {
-  text-align: center;
-  margin-bottom: 2rem;
-  color: #888;
-  font-style: italic;
-  font-size: 0.95rem;
+.error-code {
+    font-family: var(--font-duplet);
+    font-size: 8em; /* Very large for impact */
+    font-weight: 700;
+    color: var(--accent-color);
+    margin-bottom: 0.2em;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+    animation: bounceIn 1s ease-out; /* Simple entry animation */
 }
 
-section h2 {
-  font-size: 1.8rem;
-  margin-top: 2rem;
-  margin-bottom: 0.7rem;
-  color: #ddd;
+.error-message {
+    font-family: var(--font-duplet);
+    font-size: 2.5em;
+    color: var(--text-dark); /* Dark text */
+    margin-bottom: 1em;
 }
 
-section p {
-  font-size: 1.1rem;
-  margin-bottom: 1.3rem;
-  color: #ccc;
+.error-description {
+    font-size: 1.1em;
+    max-width: 600px;
+    margin-bottom: 2em;
+    color: #555; /* Slightly lighter dark text */
 }
 
-/* Footer */
-footer {
-  background-color: #111;
-  padding: 1.5rem 2rem;
-  text-align: center;
-  color: #aaa;
-  font-size: 0.9rem;
-  margin-top: auto;
+.button-group {
+    display: flex;
+    gap: 1.5rem; /* Space between buttons */
+    flex-wrap: wrap; /* Allows buttons to wrap on smaller screens */
+    justify-content: center;
 }
 
-footer ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  margin-bottom: 1rem;
-  padding: 0;
+.button {
+    display: inline-block;
+    padding: 0.8rem 1.8rem;
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    font-weight: bold;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-footer a {
-  color: #aaa;
-  text-decoration: none;
-  transition: color 0.3s ease;
+.button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-footer a:hover {
-  color: #fff;
+.primary-button {
+    background-color: var(--primary-color);
+    color: var(--text-light); /* Light text on primary button */
+    border: 2px solid var(--primary-color);
+}
+
+.primary-button:hover {
+    background-color: #0056b3; /* Darker blue */
+    border-color: #0056b3;
+}
+
+.secondary-button {
+    background-color: transparent;
+    color: var(--primary-color); /* Dark text on secondary button */
+    border: 2px solid var(--primary-color);
+}
+
+.secondary-button:hover {
+    background-color: var(--primary-color);
+    color: var(--text-light); /* Light text on hover */
+}
+
+/* Footer Styling */
+.main-footer {
+    background-color: var(--bg-light); /* Now light footer background */
+    color: var(--text-dark); /* Dark text for footer */
+    padding: 1.5rem 2rem;
+    text-align: center;
+    margin-top: auto; /* Push footer to the bottom */
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow at top */
+}
+
+.footer-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap; /* Allow links to wrap */
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: var(--text-dark); /* Dark text for footer links */
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--primary-color);
+}
+
+.copyright {
+    font-size: 0.9em;
+    color: #777; /* Slightly lighter dark text for copyright */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .main-header {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    .error-code {
+        font-size: 6em;
+    }
+
+    .error-message {
+        font-size: 2em;
+    }
+
+    .button-group {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .button {
+        width: 80%; /* Make buttons wider on small screens */
+        max-width: 300px;
+        margin: 0 auto; /* Center buttons */
+    }
+}
+
+@media (max-width: 480px) {
+    .error-code {
+        font-size: 4em;
+    }
+
+    .error-message {
+        font-size: 1.5em;
+    }
+
+    .error-description {
+        font-size: 1em;
+    }
+}
+
+/* Keyframe Animations */
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3) translateY(-50px);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05) translateY(10px);
+  }
+  70% {
+    transform: scale(0.95) translateY(-5px);
+  }
+  100% {
+    transform: scale(1) translateY(0);
+  }
 }
