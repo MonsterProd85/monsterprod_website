@@ -276,7 +276,14 @@ html, body {
   border-radius: 12px;
   max-height: 600px;
   object-fit: cover;
+  transition: transform 0.3s ease;
 }
+.about-image-scaled {
+  transform: scale(1.05);
+}
+/* .about:hover .about-image img {
+  transform: scale(1.05);
+} */
 
 /* Footer */
 .footer {
