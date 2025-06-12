@@ -36,6 +36,7 @@ window.addEventListener('load', () => {
     if (currentScrollY !== lastKnownScrollPosition) {
       if (typeof toggleHeaderClass === 'function') {
         toggleHeaderClass();
+        addAnimationToCardsOnScroll()
       }
       lastKnownScrollPosition = currentScrollY;
     }
@@ -57,4 +58,12 @@ function toggleHeaderClass() {
   }
   console.log('scroll position', scrollPosition);
   console.log('header class', header.classList);
+}
+
+function addAnimationToCardsOnScroll() {
+  const cards = document.querySelectorAll('.cards');
+
+  if (window.scrollY > 400) {
+    cards.classList.add('card-animation');
+  }
 }
