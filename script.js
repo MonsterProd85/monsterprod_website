@@ -73,8 +73,6 @@ const taglines = [
   "Faites briller vos évènements",
   "Son, lumière, action !",
   "Des événements inoubliables",
-  "L'excellence technique au service de votre événement",
-  "Votre partenaire événementiel de confiance",
   "Créons ensemble des moments magiques"
 ];
 
