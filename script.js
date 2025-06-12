@@ -67,3 +67,35 @@ function addAnimationToCardsOnScroll() {
     cards.classList.add('card-animation');
   }
 }
+
+// randomise the tagline in the main title
+const taglines = [
+  "Faites briller vos évènements",
+  "Son, lumière, action !",
+  "Des événements inoubliables",
+  "L'excellence technique au service de votre événement",
+  "Votre partenaire événementiel de confiance",
+  "Créons ensemble des moments magiques"
+];
+
+const mainTitleElement = document.getElementById('mainTitle');
+
+const randomIndex = Math.floor(Math.random() * taglines.length);
+const selectedTagline = taglines[randomIndex];
+
+mainTitleElement.textContent = `${selectedTagline}`;
+
+// scale about-image when hovering about button
+document.querySelector('.btn-secondary').addEventListener('mouseenter', function() {
+  const aboutImage = document.querySelector('.about-image img');
+  if (aboutImage) {
+    aboutImage.classList.add('about-image-scaled');
+  }
+});
+
+document.querySelector('.btn-secondary').addEventListener('mouseleave', function() {
+  const aboutImage = document.querySelector('.about-image img');
+  if (aboutImage) {
+    aboutImage.classList.remove('about-image-scaled');
+  }
+});
