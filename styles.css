@@ -110,7 +110,6 @@ html, body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  animation: fadeIn 1.5s ease-in-out;
 }
 #bg-video {
   position: absolute;
@@ -119,7 +118,6 @@ html, body {
   height: 100%;
   object-fit: cover;
 }
-
 .video-transition-box {
   position: absolute;
   width: 100vw;
@@ -142,23 +140,28 @@ html, body {
   font-family: 'Duplet', cursive;
   font-size: 3rem;
   margin-bottom: 1rem;
+  animation: fadeIn 1s ease-in-out;
 }
 .hero-content p {
   font-size: 1.2rem;
   margin-bottom: 2rem;
-  opacity: 0.9;
+  animation: fadeIn 1.5s ease-in-out;
+}
+.hero-buttons {
+  animation: fadeIn 2s ease-in-out;
 }
 .btn-primary {
+  animation: fadeIn 2s ease-in-out;
   background: #1e40af;
   color: #fff;
   padding: 0.5rem 1rem;
   border-radius: 8px;
   font-weight: 600;
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: padding 0.3s ease, background-color 0.3s ease;
 }
 .btn-primary:hover {
-  background: #374db8;
+  background-color: #374db8;
   padding: 0.8rem 1.8rem;
 }
 
