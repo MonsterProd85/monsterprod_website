@@ -50,7 +50,22 @@
     </video>
     <div class="overlay"></div>
     <div class="hero-content">
-      <h1>Faites briller vos événements</h1>
+      <h1 id="mainTitle"></h1>
+
+    <script>
+        const taglines = [
+            "Faites briller vos évènements",
+            "Son, lumière, action !",
+            "Des événements inoubliables",
+        ];
+
+        const mainTitleElement = document.getElementById('mainTitle');
+
+        const randomIndex = Math.floor(Math.random() * taglines.length);
+        const selectedTagline = taglines[randomIndex];
+
+        mainTitleElement.textContent = `${selectedTagline}`;
+    </script>
       <p>Sonorisation • Vidéo • Lumières <br> Avec Monster Prod, <b>chaque moment compte.</b></p>
       <a href="#services" class="btn-primary">Découvrir nos services</a>
     </div>
