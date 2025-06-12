@@ -141,18 +141,17 @@ html, body {
   font-family: 'Duplet', cursive;
   font-size: 3rem;
   margin-bottom: 1rem;
-  animation: fadeInFromBottom 1s ease-in-out;
+  animation: fadeInFromBottom 0.5s ease-in-out;
 }
 .hero-content p {
   font-size: 1.2rem;
   margin-bottom: 2rem;
-  animation: fadeInFromBottom 1.5s ease-in-out;
+  animation: fadeInFromBottom 1s ease-in-out;
 }
 .hero-buttons {
-  animation: fadeInFromBottom 2s ease-in-out;
+  animation: fadeInFromBottom 1.5s ease-in-out;
 }
 .btn-primary {
-  animation: fadeInFromBottom 2s ease-in-out;
   background: #1e40af;
   color: #fff;
   padding: 0.5rem 1rem;
