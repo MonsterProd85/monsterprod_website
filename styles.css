@@ -189,19 +189,25 @@ html, body {
   border-radius: 12px;
   text-align: center;
   transition: transform 0.3s, box-shadow 0.3s;
+  /* dash outline animation
   --dash-length: 100px;
   --outline-thickness: 2px;
   --outline-color: rgba(255, 255, 255, 0.382);
+  */
 }
+/*
 .card:hover::before {
   content: '';
   position: absolute;
   background-color: white;
   animation: outline-dash-around 2s linear infinite;
 }
+*/
 .card:hover {
   transform: scale(1.05);
   box-shadow: #111 0px 0px 10px;
+  animation: outlineFadeInOn 0.3s ease-in-out forwards;
+  outline: rgba(255, 255, 255, 0.318) 1px solid;
 }
 .card:hover .icon {
   transform: scale(1.2);
@@ -726,6 +732,14 @@ textarea:focus + label {
     width: var(--outline-thickness, 2px);
     height: var(--dash-length, 20px);
     background-color: var(--outline-color, white);
+  }
+}
+@keyframes outlineFadeInOn {
+  from {
+    outline: rgba(255, 255, 255, 0.693) 2px solid;
+  }
+  to {
+    outline: rgba(255, 255, 255, 0.318) 1px solid;
   }
 }
 .in-view {
