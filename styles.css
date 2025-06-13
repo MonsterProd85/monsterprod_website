@@ -414,6 +414,7 @@ html, body {
   width: fit-content;
   padding: 0px 5px;
   transform: translate(10px, 20px);
+  transition: color 0.3s ease;
 }
 
 .contact-form input[type="text"],
@@ -438,12 +439,8 @@ html, body {
   outline: none;
 }
 
-input:focus + label {
-  color: #007bff;
-}
-
-textarea:focus + label {
-  color: #007bff;
+.contact-label-focus {
+  color: #007bff !important;
 }
 
 .contact-form textarea {
