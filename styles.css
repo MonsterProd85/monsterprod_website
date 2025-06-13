@@ -531,7 +531,6 @@ html, body {
 }
 
 /* Responsiveness */
-
 @media (max-width: 1000px) {
   .header {
     font-size: 12px;
@@ -587,10 +586,10 @@ html, body {
   .footer {
     padding: 1rem 2rem;
     font-size: 0.9rem;
+    width: 90%;
+    max-width: none;
   }
-  
 }
-
 
 /* animations */
 .fade-in {
