@@ -172,7 +172,6 @@ html, body {
   padding: 4rem 2rem;
   margin: 0rem 5vw;
 }
-
 .section-title {
   text-align: center;
   font-size: 2.5rem;
@@ -270,10 +269,11 @@ html, body {
 }
 .about-image {
   flex: 1 1 300px;
+  /* overflow: hidden; */
 }
 .about-image img {
   width: 100%;
-  border-radius: 12px;
+  border-radius: 15px;
   max-height: 600px;
   object-fit: cover;
   transition: transform 0.3s ease;
@@ -401,7 +401,7 @@ html, body {
 }
 
 .contact-form .form-group {
-  margin-bottom: 20px;
+  margin-bottom: 0px;
 }
 
 .contact-form label {
@@ -531,113 +531,64 @@ html, body {
 }
 
 /* Responsiveness */
-@media (max-width: 992px) {
-    .contact-grid-container {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
 
-    .contact-form,
-    .contact-info {
-        max-width: 500px;
-        margin: 0 auto;
-    }
-
-    .contact-info {
-        padding: 0;
-    }
-
-    .contact-info h3,
-    .contact-info ul,
-    .contact-info .social-links {
-        text-align: center;
-    }
-    .contact-info ul li {
-        justify-content: center;
-    }
-}
-
-@media (max-width: 768px) {
-    .contact {
-        padding: 40px 15px;
-    }
-
-    .contact .section-title {
-        font-size: 2em;
-    }
-
-    .contact-intro {
-        font-size: 1em;
-        margin-bottom: 30px;
-    }
-
-    .contact-form {
-        padding: 25px;
-    }
-}
-
-@media (max-width: 480px) {
-    .contact-form {
-        padding: 20px;
-    }
-
-    .contact-form input[type="text"],
-    .contact-form input[type="email"],
-    .contact-form textarea {
-        padding: 10px 12px;
-        font-size: 0.95em;
-    }
-
-    .contact-form .btn-primary {
-        font-size: 1em;
-        padding: 10px 25px;
-    }
-}
-
-@media (max-width: 768px) {
-    .contact {
-        padding: 40px 15px;
-    }
-
-    .contact .section-title {
-        font-size: 2em;
-    }
-
-    .contact-intro {
-        font-size: 1em;
-        margin-bottom: 30px;
-    }
-
-    .contact-form {
-        padding: 25px;
-    }
-}
-
-@media (max-width: 480px) {
-    .contact-form {
-        padding: 20px;
-    }
-
-    .contact-form input[type="text"],
-    .contact-form input[type="email"],
-    .contact-form textarea {
-        padding: 10px 12px;
-        font-size: 0.95em;
-    }
-
-    .contact-form .btn-primary {
-        font-size: 1em;
-        padding: 10px 25px;
-    }
-}
-
-@media (max-width: 768px) {
-  .about {
-    flex-direction: column;
+@media (max-width: 1000px) {
+  .header {
+    font-size: 12px;
+  }
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  p {
+    font-size: 1rem !important;
+  }
+  .btn-primary {
+    font-size: 0.9rem;
+  }
+  h2 {
+    font-size: 2rem !important;
+  }
+  section {
+    margin: 0rem 0vw !important;
+    padding: 2rem 5vw !important;
+  }
+  .card {
+    padding: 1rem;
+  }
+  .icon img {
+    max-height: 50px;
+  }
+  h3 {
+    font-size: 1.15rem;
+  }
+  .about-image img {
+    max-height: 50vh;
+  }
+  .btn-secondary {
+    width: 100%;
+    text-align: center;
+  }
+  .contact-intro {
+    margin-bottom: 0;
+  }
+  .contact-form {
+    padding: 0;
+  }
+  .contact-info ul li a {
+    width: 100%;
+    text-align: left;
+  }
+  .contact-grid-container {
+    grid-template-columns: 1fr;
+  }
+  .contact-info {
+    padding: 0;
   }
   .footer {
-    padding: 1rem 1rem;
+    padding: 1rem 2rem;
+    font-size: 0.9rem;
   }
+  
 }
 
 

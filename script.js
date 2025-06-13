@@ -99,12 +99,9 @@ document.querySelector('.btn-secondary').addEventListener('mouseleave', function
 });
 
 
-// Add this to your existing script.js file or create a new script
+// label color in contact form
 document.addEventListener('DOMContentLoaded', function() {
-    // Select all inputs and textarea in the contact form
     const formInputs = document.querySelectorAll('.contact-form input, .contact-form textarea');
-    
-    // label color in contact form
     formInputs.forEach(input => {
         input.addEventListener('focus', function() {
             const label = document.querySelector(`label[for="${this.id}"]`);
