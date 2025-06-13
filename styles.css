@@ -539,13 +539,13 @@ html, body {
     font-size: 2rem;
   }
   p {
-    font-size: 1rem !important;
+    font-size: 0.9rem !important;
   }
-  .btn-primary {
+  a {
     font-size: 0.9rem;
   }
   h2 {
-    font-size: 2rem !important;
+    font-size: 1.5rem !important;
   }
   section {
     margin: 0rem 0vw !important;
@@ -558,7 +558,7 @@ html, body {
     max-height: 50px;
   }
   h3 {
-    font-size: 1.15rem;
+    font-size: 1.5rem !important;
   }
   .about-image img {
     max-height: 50vh;
@@ -573,9 +573,19 @@ html, body {
   .contact-form {
     padding: 0;
   }
+  .contact-form label {
+    font-size: 0.9rem;
+  }
+  .contact-form input[type="text"],
+  .contact-form input[type="email"],
+  .contact-form textarea {
+    font-size: 0.9rem;
+    padding: 10px 12px;
+  }
   .contact-info ul li a {
     width: 100%;
     text-align: left;
+    font-size: 0.9rem;
   }
   .contact-grid-container {
     grid-template-columns: 1fr;
